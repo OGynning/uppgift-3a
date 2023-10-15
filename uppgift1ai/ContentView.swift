@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var fruker = ["apelsin" , "banan", "äpple"]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        
+        NavigationStack{
+            VStack {
+                Text("Uppgift 3")
+                
+                HStack{
+                    List(fruker, id: \.self ){frukt in
+                        
+                        NavigationLink(destination: Text(frukt)){
+                            InfoView(frukten: frukt)
+                        }
+                    
+                    }
+                }
+                .padding(.top)
+                
+                
+                
+            }
         }
-        .padding()
     }
 }
 
