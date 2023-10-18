@@ -15,6 +15,8 @@
 		0C9FC6212AC3583C002344F3 /* uppgift1aiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FC6202AC3583C002344F3 /* uppgift1aiTests.swift */; };
 		0C9FC62B2AC3583C002344F3 /* uppgift1aiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FC62A2AC3583C002344F3 /* uppgift1aiUITests.swift */; };
 		0C9FC62D2AC3583C002344F3 /* uppgift1aiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FC62C2AC3583C002344F3 /* uppgift1aiUITestsLaunchTests.swift */; };
+		0CFFCF662ADFC97000DE8615 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0CFFCF652ADFC97000DE8615 /* MobileNetV2.mlmodel */; };
+		0CFFCF682ADFD91600DE8615 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFFCF672ADFD91600DE8615 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		0C9FC6262AC3583C002344F3 /* uppgift1aiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uppgift1aiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9FC62A2AC3583C002344F3 /* uppgift1aiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uppgift1aiUITests.swift; sourceTree = "<group>"; };
 		0C9FC62C2AC3583C002344F3 /* uppgift1aiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uppgift1aiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0CFFCF652ADFC97000DE8615 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		0CFFCF672ADFD91600DE8615 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			children = (
 				0C9FC60F2AC35839002344F3 /* uppgift1aiApp.swift */,
 				0C9FC6112AC35839002344F3 /* ContentView.swift */,
+				0CFFCF672ADFD91600DE8615 /* ViewModel.swift */,
+				0CFFCF642ADFC92B00DE8615 /* MlCore */,
 				0C3C94A22ADC59D100DB770C /* InfoView.swift */,
 				0C9FC6132AC3583B002344F3 /* Assets.xcassets */,
 				0C9FC6152AC3583B002344F3 /* Preview Content */,
@@ -128,6 +134,14 @@
 				0C9FC62C2AC3583C002344F3 /* uppgift1aiUITestsLaunchTests.swift */,
 			);
 			path = uppgift1aiUITests;
+			sourceTree = "<group>";
+		};
+		0CFFCF642ADFC92B00DE8615 /* MlCore */ = {
+			isa = PBXGroup;
+			children = (
+				0CFFCF652ADFC97000DE8615 /* MobileNetV2.mlmodel */,
+			);
+			path = MlCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +208,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					0C9FC60B2AC35839002344F3 = {
 						CreatedOnToolsVersion = 14.3;
@@ -260,8 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFFCF682ADFD91600DE8615 /* ViewModel.swift in Sources */,
 				0C9FC6122AC35839002344F3 /* ContentView.swift in Sources */,
 				0C3C94A32ADC59D100DB770C /* InfoView.swift in Sources */,
+				0CFFCF662ADFC97000DE8615 /* MobileNetV2.mlmodel in Sources */,
 				0C9FC6102AC35839002344F3 /* uppgift1aiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +351,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -395,6 +412,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
